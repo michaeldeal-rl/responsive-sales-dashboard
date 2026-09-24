@@ -177,6 +177,74 @@ body {
   justify-content: center;
 }
 
+.followups-card {
+  grid-column: 1 / -1;
+  overflow-x: auto;
+}
+
+.followups-table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.followups-table th,
+.followups-table td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.followups-table th {
+  color: #9e9ea4;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.03em;
+}
+
+.followups-table td {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.followups-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.followups-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.due-today {
+  color: #ff6d00;
+  font-weight: 600;
+}
+
+.stage-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.stage-qualified {
+  background-color: rgba(41, 98, 255, 0.2);
+  color: #6d97ff;
+}
+
+.stage-proposal {
+  background-color: rgba(245, 166, 35, 0.2);
+  color: #f5a623;
+}
+
+.stage-negotiation {
+  background-color: rgba(0, 171, 87, 0.2);
+  color: #29e08a;
+}
+
 /* ---------- MEDIA QUERIES ---------- */
 
 /* Medium <= 992px */

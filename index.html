@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Sales Dashboard</title>
 
     <!-- Vendored fonts (Montserrat + Material Icons Outlined) -->
     <link rel="stylesheet" href="css/fonts.css">
@@ -34,7 +34,7 @@
       <aside id="sidebar">
         <div class="sidebar-title">
           <div class="sidebar-brand">
-            <span class="material-icons-outlined">shopping_cart</span> STORE
+            <span class="material-icons-outlined">trending_up</span> SALESHUB
           </div>
           <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
         </div>
@@ -47,22 +47,22 @@
           </li>
           <li class="sidebar-list-item">
             <a href="#" target="_blank">
-              <span class="material-icons-outlined">inventory_2</span> Products
+              <span class="material-icons-outlined">handshake</span> Deals
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="#" target="_blank">
-              <span class="material-icons-outlined">category</span> Categories
+              <span class="material-icons-outlined">insights</span> Pipeline
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="#" target="_blank">
-              <span class="material-icons-outlined">groups</span> Customers
+              <span class="material-icons-outlined">groups</span> Contacts
             </a>
           </li>
           <li class="sidebar-list-item">
             <a href="#" target="_blank">
-              <span class="material-icons-outlined">fact_check</span> Inventory
+              <span class="material-icons-outlined">fact_check</span> Follow-ups
             </a>
           </li>
           <li class="sidebar-list-item">
@@ -89,34 +89,34 @@
 
           <div class="card">
             <div class="card-inner">
-              <h3>PRODUCTS</h3>
-              <span class="material-icons-outlined">inventory_2</span>
+              <h3>REVENUE (MTD)</h3>
+              <span class="material-icons-outlined">payments</span>
             </div>
-            <h1>249</h1>
+            <h1>$84,250</h1>
           </div>
 
           <div class="card">
             <div class="card-inner">
-              <h3>CATEGORIES</h3>
-              <span class="material-icons-outlined">category</span>
+              <h3>DEALS WON</h3>
+              <span class="material-icons-outlined">handshake</span>
             </div>
-            <h1>25</h1>
+            <h1>18</h1>
           </div>
 
           <div class="card">
             <div class="card-inner">
-              <h3>CUSTOMERS</h3>
-              <span class="material-icons-outlined">groups</span>
+              <h3>PIPELINE VALUE</h3>
+              <span class="material-icons-outlined">insights</span>
             </div>
-            <h1>1500</h1>
+            <h1>$212,400</h1>
           </div>
 
           <div class="card">
             <div class="card-inner">
-              <h3>ALERTS</h3>
+              <h3>FOLLOW-UPS DUE</h3>
               <span class="material-icons-outlined">notification_important</span>
             </div>
-            <h1>56</h1>
+            <h1>7</h1>
           </div>
 
         </div>
@@ -124,13 +124,65 @@
         <div class="charts">
 
           <div class="charts-card">
-            <h2 class="chart-title">Top 5 Products</h2>
+            <h2 class="chart-title">Top 5 Deals</h2>
             <div id="bar-chart"></div>
           </div>
 
           <div class="charts-card">
-            <h2 class="chart-title">Purchase and Sales Orders</h2>
+            <h2 class="chart-title">Revenue Trend</h2>
             <div id="area-chart"></div>
+          </div>
+
+          <div class="charts-card followups-card">
+            <h2 class="chart-title">Follow-ups Due</h2>
+            <table class="followups-table">
+              <thead>
+                <tr>
+                  <th>Deal</th>
+                  <th>Contact</th>
+                  <th>Stage</th>
+                  <th>Next Action</th>
+                  <th>Due</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Acme Corp — Renewal</td>
+                  <td>Dana Whitfield</td>
+                  <td><span class="stage-pill stage-negotiation">Negotiation</span></td>
+                  <td>Send revised quote</td>
+                  <td class="due-today">Today</td>
+                </tr>
+                <tr>
+                  <td>Globex — Expansion</td>
+                  <td>Marcus Lee</td>
+                  <td><span class="stage-pill stage-proposal">Proposal</span></td>
+                  <td>Follow-up call</td>
+                  <td class="due-today">Today</td>
+                </tr>
+                <tr>
+                  <td>Initech — New Business</td>
+                  <td>Priya Anand</td>
+                  <td><span class="stage-pill stage-qualified">Qualified</span></td>
+                  <td>Send case studies</td>
+                  <td>Tomorrow</td>
+                </tr>
+                <tr>
+                  <td>Umbrella Co — Upsell</td>
+                  <td>Chris Bauer</td>
+                  <td><span class="stage-pill stage-negotiation">Negotiation</span></td>
+                  <td>Contract review</td>
+                  <td>Tomorrow</td>
+                </tr>
+                <tr>
+                  <td>Soylent Corp — New Business</td>
+                  <td>Aisha Rahman</td>
+                  <td><span class="stage-pill stage-proposal">Proposal</span></td>
+                  <td>Demo follow-up</td>
+                  <td>Sep 26</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
 
         </div>
