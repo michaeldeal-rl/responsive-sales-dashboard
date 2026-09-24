@@ -23,8 +23,8 @@ function closeSidebar() {
 const barChartOptions = {
   series: [
     {
-      data: [10, 8, 6, 4, 2],
-      name: 'Products',
+      data: [42000, 31500, 27800, 19200, 15400],
+      name: 'Deal Value',
     },
   ],
   chart: {
@@ -79,9 +79,12 @@ const barChartOptions = {
     shared: true,
     intersect: false,
     theme: 'dark',
+    y: {
+      formatter: (value) => `$${value.toLocaleString()}`,
+    },
   },
   xaxis: {
-    categories: ['Laptop', 'Phone', 'Monitor', 'Headphones', 'Camera'],
+    categories: ['Acme Corp', 'Globex', 'Initech', 'Umbrella Co', 'Soylent Corp'],
     title: {
       style: {
         color: '#f5f7ff',
@@ -103,10 +106,16 @@ const barChartOptions = {
   },
   yaxis: {
     title: {
-      text: 'Count',
+      text: 'Deal Value ($)',
       style: {
         color: '#f5f7ff',
       },
+    },
+    labels: {
+      style: {
+        colors: '#f5f7ff',
+      },
+      formatter: (value) => `$${(value / 1000).toFixed(0)}k`,
     },
     axisBorder: {
       color: '#55596e',
@@ -115,11 +124,6 @@ const barChartOptions = {
     axisTicks: {
       color: '#55596e',
       show: true,
-    },
-    labels: {
-      style: {
-        colors: '#f5f7ff',
-      },
     },
   },
 };
@@ -134,12 +138,12 @@ barChart.render();
 const areaChartOptions = {
   series: [
     {
-      name: 'Purchase Orders',
-      data: [31, 40, 28, 51, 42, 109, 100],
+      name: 'Actual Revenue',
+      data: [38000, 42000, 51000, 47000, 58000, 64000, 71000],
     },
     {
-      name: 'Sales Orders',
-      data: [11, 32, 45, 32, 34, 52, 41],
+      name: 'Target',
+      data: [40000, 40000, 45000, 45000, 50000, 60000, 65000],
     },
   ],
   chart: {
@@ -151,7 +155,7 @@ const areaChartOptions = {
       show: false,
     },
   },
-  colors: ['#00ab57', '#d50000'],
+  colors: ['#00ab57', '#f5a623'],
   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
   dataLabels: {
     enabled: false,
@@ -210,39 +214,27 @@ const areaChartOptions = {
       },
     },
   },
-  yaxis: [
-    {
-      title: {
-        text: 'Purchase Orders',
-        style: {
-          color: '#f5f7ff',
-        },
-      },
-      labels: {
-        style: {
-          colors: ['#f5f7ff'],
-        },
+  yaxis: {
+    title: {
+      text: 'Revenue ($)',
+      style: {
+        color: '#f5f7ff',
       },
     },
-    {
-      opposite: true,
-      title: {
-        text: 'Sales Orders',
-        style: {
-          color: '#f5f7ff',
-        },
+    labels: {
+      style: {
+        colors: ['#f5f7ff'],
       },
-      labels: {
-        style: {
-          colors: ['#f5f7ff'],
-        },
-      },
+      formatter: (value) => `$${(value / 1000).toFixed(0)}k`,
     },
-  ],
+  },
   tooltip: {
     shared: true,
     intersect: false,
     theme: 'dark',
+    y: {
+      formatter: (value) => `$${value.toLocaleString()}`,
+    },
   },
 };
 
