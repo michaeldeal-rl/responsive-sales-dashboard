@@ -1,0 +1,7 @@
+{
+  "projectName": "responsive-sales-dashboard",
+  "defaults": {
+    "mode": "agent",
+    "model": "claude-sonnet-4"
+  }
+}
